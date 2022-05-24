@@ -1,0 +1,52 @@
+body {
+   font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+   height: 100%;
+   width: 220px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #111;
+   z-index: 20;
+}
+
+.sidenav_header {
+   letter-spacing: 2px;
+   color: #F0E68C;
+   font-size: 25px;
+   padding-left: 8px;
+   margin-bottom: 15px;
+   border-left: 2px solid #b99d61;
+   display: flex;
+
+}
+
+.sidenav a {
+   padding: 6px 8px 6px 16px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #818181;
+   display: block;
+}
+
+.sidenav a:hover {
+   color: #f1f1f1;
+}
+
+.main {
+   margin-left: 220px;
+   /* width sidebar */
+   padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+   .sidenav {
+      padding-top: 15px;
+   }
+
+   .sidenav a {
+      font-size: 18px;
+   }
+}

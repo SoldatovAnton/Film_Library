@@ -1,0 +1,14 @@
+.main {
+   font: 20px sans-serif;
+}
+
+.main_form_genre {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.main_form_genre_checkbox {
+   display: flex;
+   width: 250px;
+   font: 16px sans-serif;
+}

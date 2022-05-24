@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/sidenav.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <title>Фильмотека</title>
+</head>
+
+<body>
+
+    <div id="sidenav" class="sidenav">
+        <h3 class="sidenav_header">Фильмотека</h3>
+        <a class="navBut" href="index.html">Лента фильмов</a>
+        <a class="navBut popup-link" href="#popup">Добавить фильм</a>
+        <a class="navBut popup-link" href="#popup2">Подбор</a>
+    </div>
+
+    <div class="main">
+        <div class="filmList">
+        </div>
+
+    </div>
+
+    <div id="popup" class="popup">
+        <a href="#sidenav" class="popup_area popupReload"></a>
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="#sidenav" class="popup_close close-popup  popupReload">X</a>
+                <form action="#" method="get" id="form" name="filmForm">
+                    <h3 style="margin-top: 25px;">Чтобы добавить фильм, заполните следующие поля:</h3>
+                    <p>Название: <input type="text" name="Name" required></p>
+                    <p style="margin-bottom: 5px;">Жанр:</p>
+                    <div class="form_genre">
+                        <p class="form_genre_checkbox">Комедия <input type="checkbox" name="Comedy" value="Comedy">
+                        </p>
+                        <p class="form_genre_checkbox">Ужас <input type="checkbox" name="Horror" value="Horror">
+                        </p>
+                        <p class="form_genre_checkbox">Фантастика <input type="checkbox" name="Fantasy" value="Fantasy">
+                        </p>
+                        <p class="form_genre_checkbox">Триллер <input type="checkbox" name="Thriller" value="Thriller">
+                        </p>
+                        <p class="form_genre_checkbox">Детектив <input type="checkbox" name="Detective"
+                                value="Detective"></p>
+                        <p class="form_genre_checkbox">Драма <input type="checkbox" name="Drama" value="Drama"></p>
+                        <p class="form_genre_checkbox">Боевик <input type="checkbox" name="ActionMovie"
+                                value="ActionMovie">
+                        </p>
+                        <p class="form_genre_checkbox">Исторический <input type="checkbox" name="History"
+                                value="History"></p>
+                        <!-- <p class="form_genre_checkbox">Мультфильм <input type="checkbox" name="Cartoon" value="Cartoon">
+                        </p> -->
+                    </div>
+                    <p style="margin-top: 10px;">Страна: <input type="text" name="Country"></p>
+                    <div>
+                        <p> Возрастной рейтинг:
+                            <select name="Age" required>
+                                <option selected value="0">0+</option>
+                                <option value="6">6+</option>
+                                <option value="12">12+</option>
+                                <option value="16">16+</option>
+                                <option value="18">18+</option>
+                            </select>
+                        </p>
+                    </div>
+                    <p>Дата выхода: <input type="date" name="Date" min="1887-01-01"></p>
+                    <p>Ссылка на изображение: <input type="url" name="Url" placeholder="https://example.com" size="30">
+                    </p>
+                    <p>
+                        <button type="submit">Добавить фильм</button>
+                        <button type="reset">Очистить форму</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup2" class="popup">
+        <a href="#sidenav" class="popup_area"></a>
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="#sidenav" class="popup_close close-popup">X</a>
+                <form action="#" method="get" id="formSelection" name="filmSelection">
+                    <h3 style="margin-top: 25px;">Подбор фильмов</h3>
+                    <p>Название: <input type="text" name="Name"></p>
+                    <p style="margin-bottom: 5px;">Жанр:</p>
+                    <div class="form_genre">
+                        <p class="form_genre_checkbox">Комедия <input type="checkbox" name="Comedy" value="Comedy">
+                        </p>
+                        <p class="form_genre_checkbox">Ужас <input type="checkbox" name="Horror" value="Horror">
+                        </p>
+                        <p class="form_genre_checkbox">Фантастика <input type="checkbox" name="Fantasy" value="Fantasy">
+                        </p>
+                        <p class="form_genre_checkbox">Триллер <input type="checkbox" name="Thriller" value="Thriller">
+                        </p>
+                        <p class="form_genre_checkbox">Детектив <input type="checkbox" name="Detective"
+                                value="Detective"></p>
+                        <p class="form_genre_checkbox">Драма <input type="checkbox" name="Drama" value="Drama"></p>
+                        <p class="form_genre_checkbox">Боевик <input type="checkbox" name="ActionMovie"
+                                value="ActionMovie">
+                        </p>
+                        <p class="form_genre_checkbox">Исторический <input type="checkbox" name="History"
+                                value="History"></p>
+                    </div>
+                    <p style="margin-top: 10px;">Страна: <input type="text" name="Country"></p>
+                    </p>
+                    <p>
+                        <button type="submit">Искать фильмы</button>
+                        <button type="reset">Очистить форму</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup3" class="popup">
+        <a href="#sidenav" class="popup_area popupReload"></a>
+        <div class="popup_body">
+            <div class="popup_content text-align">
+                <a href="#sidenav" class="popup_close close-popup  popupReload">X</a>
+                <div class="text-field"></div>
+                <form action="#" method="get" id="formReview" name="filmReview">
+                    <div class="modal__item">
+                        <input type="text" name="review" class="modal__input" placeholder="Ваш отзыв">
+                    </div>
+                    <div class="modal__item">
+                        <button type="submit" class="modal__button">Добавить отзыв</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>
